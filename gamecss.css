@@ -302,6 +302,9 @@
     #rtline{
         margin-top: 20%;
     }
+    #spk{
+        display:none;
+    }
     #start{
         display: none;
     }
