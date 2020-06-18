@@ -3,7 +3,6 @@ var id,turn=0,ran,win=0,tie=0,lose=0,round=0,flag=0,over=0,aud=0;
 var win_aud=new Audio('assets/won.mp3');
 var los_aud=new Audio('assets/over.mp3');
 var audio=new Audio('assets/game-menu.mp3');
-audio.play();
 
 
 
