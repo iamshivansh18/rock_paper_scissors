@@ -303,10 +303,13 @@
         margin-top: 20%;
     }
     #spkon{
-        display:none;
+        display: none;
     }
     #spkoff{
-        display:none;
+        display: none;
+    }
+    #spk{
+        display: none;
     }
     #start{
         display: none;
