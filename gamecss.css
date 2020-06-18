@@ -1,0 +1,558 @@
+*{
+    background-color: #ffffff;
+    
+}
+
+#container{
+    filter: blur(5px);
+    z-index: -1;
+    float: left;
+    width: 100%;
+    margin-right: 10%;
+}
+
+#rock{
+    animation: move_r 1s infinite alternate;
+    display: inline-block;
+}
+#paper{
+    animation: move_p 1s infinite alternate;
+    display: inline-block;  
+}
+#scissor{
+    animation: move_s 1s infinite alternate;
+    display: inline-block;
+}
+
+@keyframes move_r{
+    from {transform: rotateY(-30deg);}
+    to {transform: rotateY(30deg);}
+}
+ 
+@keyframes move_p{
+    from {transform: rotateY(-30deg);}
+    to {transform: rotateY(30deg);}
+}
+
+@keyframes move_s{
+    from {transform: rotateY(-30deg);}
+    to {transform: rotateY(30deg);}
+}
+
+@media only screen and (min-width:1200px)
+{
+    #rotate{
+        display: none;
+    }
+
+    #spk{
+        float: left;
+        z-index: 100;
+    }
+
+    #spkon{
+        display: block;
+        width: 30%;
+    }
+    #spkon:hover{
+        cursor: pointer;
+    }
+    #spkoff{
+        display: none;
+        width: 30%;
+    }
+    
+    #spkoff:hover{
+        cursor: pointer;
+    }
+
+    .head{
+        text-align: center;
+        font: bold 180% cursive;
+        word-spacing: 40%;
+        margin-right: 14%; 
+    }
+
+    #start{
+        position: absolute;
+        background-color:grey;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: cursive;
+        z-index: 100;
+        width: 20%;
+        margin-top: 17%;
+        height: 180px;
+        margin-left: 37%;
+        border: ridge 5px grey;
+        text-align: center;
+        
+    }
+
+    input{
+        width: 50%;
+        height: 20px;
+        margin-top:10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    button{
+        font-family: cursive;
+        font-weight: bold;
+        font-size: 15px;
+        margin-top: 10px;
+        height: 35px;
+        width: 50%;
+    }
+    #user{
+        z-index: -1;
+        width: 25%;
+        margin-left: 20%;
+        float: left;
+    }
+
+    .anime_u{
+        animation-name: tilt;
+        animation-direction: alternate;
+        animation-duration: 0.2s;   
+        animation-iteration-count: 5;
+    }
+
+    @keyframes tilt{
+        from {transform: rotate(-10deg);}
+        to{transform: rotate(10deg);}
+    }
+
+    .anime_c{
+        animation-name: tilt_c;
+        animation-direction: alternate;
+        animation-duration: 0.2s;   
+        animation-iteration-count: 5;
+    }
+
+    @keyframes tilt_c{
+        from {transform: rotate(10deg);}
+        to{transform: rotate(-10deg);}
+    }
+
+    #comp{
+        z-index: -1;
+        width: 25%;
+        margin-left: 5%;
+    }
+
+    .label{
+        margin-top: 20px;
+        font: bold 20px cursive;
+    }   
+
+    .lab_user{
+        margin-left: 30%;
+        display: inline;
+
+    }
+
+    .lab_comp{
+        margin-left: 25%;
+        display: inline;
+
+    }       
+
+    .choice{
+        margin-top: 1%;
+        text-align: center;
+        margin-left: -4%;
+    }
+
+    #head_ch{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        text-decoration: underline dotted;
+        text-underline-position: under;
+        margin-bottom: 20px;
+    }
+
+
+    .rock_ch{
+        width:20%;
+        height: 150px;
+    }
+    .rock_ch:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .paper_ch{
+        width:20%;
+        height: 150px;
+        
+    }
+    .paper_ch:hover{
+        cursor: pointer;
+        transform: scale(1.1);    
+    }
+    .scissor_ch{
+        width:20%;
+        height: 150px;
+    }
+    .scissor_ch:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    #record{
+        filter: blur(5px);
+        z-index: -1;
+        font-family: cursive;
+        font-size: 20px;
+        font-weight: bold;
+        float: right;
+        text-align: center;
+        margin-top: -35%;
+        margin-right: 9%;
+    }
+
+    #result{
+        position: absolute;
+        z-index: 100;
+        display: none;
+        width: 20%;
+        margin-left: 37%;
+        margin-top: 60px;
+        border: 8px double black;
+    }
+
+    #won{
+        display: none;
+    }
+
+    #lost
+    {
+        display: none;
+    }
+    #tied{
+        display: none;
+    }
+    #anc{
+        position: absolute;
+        z-index: 200;
+        margin-left: 43.5%;
+        font-weight: bold;
+        font-size: large;
+        font-family: cursive;
+    }
+
+    #anc-win{
+        background-color: rgb(240, 240, 0);
+        display: none;
+    }
+    #anc-lost{
+        background-color: rgb(240, 240, 0);
+        display: none;
+    }
+    #anc-tied{
+        background-color: rgb(240, 240, 0);
+        display: none;
+    }
+
+    #again{
+        position: absolute;
+        display: none;
+        z-index: 1000;
+        margin-top: 26%;
+        margin-left: 44%;
+        font-family: cursive;
+        font-weight: bold;
+        text-decoration: none;
+        animation-name: mycolor;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+
+    @keyframes mycolor{
+        0%{color: black;}
+        50%{color: black;}
+        51%{color: rgb(240, 240, 0);}
+        100%{color: rgb(240, 240, 0);}
+    }
+
+}
+
+@media only screen and (min-width:480px) and (max-width:1200px) and (orientation:portrait)
+{   
+    .head{
+        margin-top: 30px;
+        text-align: center;
+        font: bold 180% cursive;
+        word-spacing: 40%;
+        font-weight: 1900;
+    }
+
+    #rotate{
+        display: block;
+        margin-top: 10%;
+        text-align: center;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    #rtimg{
+        width: 50%;
+    }
+    #rtline{
+        margin-top: 20%;
+    }
+    #start{
+        display: none;
+    }
+    #container{
+        display: none;
+    }
+    #record{
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width:480px) and (max-width:1199px) and (orientation:landscape)
+{
+    #rotate{
+        display: none;
+    }
+
+    
+    #spk{
+        float: left;
+        z-index: 100;
+    }
+
+    #spkon{
+        display: block;
+        width: 30%;
+    }
+    #spkon:hover{
+        cursor: pointer;
+    }
+    #spkoff{
+        display: none;
+        width: 30%;
+    }
+    
+    #spkoff:hover{
+        cursor: pointer;
+    }
+
+    .head{
+        text-align: center;
+        font: bold 180% cursive;
+        word-spacing: 40%;
+        margin-right: 20%;
+    }
+
+    #start{
+        position: absolute;
+        background-color: grey;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: cursive;
+        z-index: 100;
+        width: 32%;
+        margin-top: 17%;
+        height: 180px;
+        margin-left: 30%;
+        border: ridge 5px grey;
+        text-align: center;
+        
+    }
+    
+    input{
+        width: 50%;
+        height: 20px;
+        margin-top:10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    
+    button{
+        font-family: cursive;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 10px;
+        height: 35px;
+        width: 50%;
+    }
+    #user{
+        z-index: -1;
+        width: 25%;
+        margin-left: 20%;
+        float: left;
+    }
+    
+    .anime_u{
+        animation-name: tilt;
+        animation-direction: alternate;
+        animation-duration: 0.2s;   
+        animation-iteration-count: 5;
+    }
+    
+    @keyframes tilt{
+        from {transform: rotate(-10deg);}
+        to{transform: rotate(10deg);}
+    }
+    
+    .anime_c{
+        animation-name: tilt_c;
+        animation-direction: alternate;
+        animation-duration: 0.2s;   
+        animation-iteration-count: 5;
+    }
+    
+    @keyframes tilt_c{
+        from {transform: rotate(10deg);}
+        to{transform: rotate(-10deg);}
+    }
+    
+    #comp{
+        z-index: -1;
+        width: 25%;
+        margin-left: 5%;
+    }
+    
+    .label{
+        margin-top: 30px;
+        font: bold 20px cursive;
+    }   
+    
+    .lab_user{
+        margin-left: 30%;
+        display: inline;
+    
+    }
+    
+    .lab_comp{
+        margin-left: 25%;
+        display: inline;
+    
+    }       
+    
+    .choice{
+        margin-top: 1%;
+        text-align: center;
+        margin-left: -4%;
+    }
+    
+    #head_ch{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        text-decoration: underline dotted;
+        text-underline-position: under;
+        margin-bottom: 20px;
+    }
+    
+    
+    .rock_ch{
+        width:20%;
+        height: 150px;
+    }
+    .rock_ch:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    
+    .paper_ch{
+        width:20%;
+        height: 150px;
+        
+    }
+    .paper_ch:hover{
+        cursor: pointer;
+        transform: scale(1.1);    
+    }
+    .scissor_ch{
+        width:20%;
+        height: 150px;
+    }
+    .scissor_ch:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    
+    #record{
+        filter: blur(5px);
+        z-index: 10;
+        font-family: cursive;
+        font-size: 20px;
+        font-weight: bold;
+        float: right;
+        text-align: center;
+        margin-top: -40%;
+        margin-right: 9%;
+    }
+    
+    #result{
+        position: absolute;
+        z-index: 100;
+        display: none;
+        width: 20%;
+        margin-left: 37%;
+        margin-top: 60px;
+        border: 8px double black;
+    }
+    
+    #won{
+        display: none;
+    }
+    
+    #lost
+    {
+        display: none;
+    }
+    #tied{
+        display: none;
+    }
+    #anc{
+        position: absolute;
+        z-index: 200;
+        margin-left: 43.5%;
+        font-weight: bold;
+        font-size: large;
+        font-family: cursive;
+    }
+    
+    #anc-win{
+        background-color: rgb(240, 240, 0);
+        display: none;
+    }
+    #anc-lost{
+        background-color: rgb(240, 240, 0);
+        display: none;
+    }
+    #anc-tied{
+        background-color: rgb(240, 240, 0);
+        display: none;
+    }
+    
+    #again{
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        margin-top: 30%;
+        margin-left: 42%;
+        font-family: cursive;
+        font-weight: bold;
+        text-decoration: none;
+        animation-name: mycolor;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+    }
+    
+    @keyframes mycolor{
+        0%{color: black;}
+        50%{color: black;}
+        51%{color: gold;}
+        100%{color: gold;}
+    }
+       
+
+}
