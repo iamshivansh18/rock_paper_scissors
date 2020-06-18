@@ -302,7 +302,10 @@
     #rtline{
         margin-top: 20%;
     }
-    #spk{
+    #spkon{
+        display:none;
+    }
+    #spkoff{
         display:none;
     }
     #start{
