@@ -1,1 +1,1 @@
-# game_1
+A game of rock paper scissors 
