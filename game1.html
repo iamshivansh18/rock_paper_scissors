@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            GAME
+        </title>
+        <link rel="stylesheet" type="text/css" href="gamecss.css">
+    </head>
+
+    <body>
+        
+        <div id="start">
+            <br>
+            Enter The Number Of Rounds<br><input type="number" id="rounds" value="10">
+            <br>
+            <button onclick="fun()">Start</button>
+        </div>        
+
+        <div id="spk" onclick="stopaud()">
+            <img id="spkon" src="assets/speaker.svg">
+            <img id="spkoff" src="assets/speaker-off.svg">
+        </div>
+        
+        <div class="head">
+                <p id="rock">ROCK</p>
+                <p id="paper">PAPER</p>
+                <p id="scissor">SCISSOR</p>
+        </div>
+        
+        <div id="rotate"> 
+            <img id="rtimg" src="assets/rotateps.png">
+            <br>
+            <p id="rtline">PLEASE ROTATE YOUR PHONE TO LANDSCAPE</p>
+        </div>
+
+        <div id="container">
+            <div class="game" >
+
+                <div id="result">
+                    <img id="won" src="assets/trophy.svg">
+                    <img id="lost" src="assets/thumb-down.svg">
+                    <img id="tied" src="assets/shaking-hands.svg">
+                </div>
+
+                <div id="anc">
+                    <div id="anc-win">
+                        YOU WON
+                    </div>
+                    <div id="anc-lost">
+                        YOU LOST
+                    </div>
+                    <div id="anc-tied">
+                        MATCH TIED
+                    </div>
+                </div>
+            
+                <a id="again" href="game.html">PLAY AGAIN !!!</a>
+
+                <img id="user" src="assets/paper_u.svg">
+                <img id="comp" src="assets/paper_c.svg">
+
+                <div class="label">
+                    <p class="lab_user">USER</p>
+                    <p class="lab_comp">COMPUTER</p>
+                </div>
+                
+                <div class="choice"> 
+                    <p id="head_ch">CHOOSE YOUR MOVE</p>
+                    <img class="rock_ch" src="assets/rock.svg" alt="rock" onclick="rock()">
+                    <img class="paper_ch" src="assets/paper.svg" alt="paper" onclick="paper()"> 
+                    <img class="scissor_ch" src="assets/scissors.svg" alt="scissor" onclick="scissor()">
+                </div>
+            </div>
+        </div> 
+
+        <div id="record">
+            <p>Wins: <span id="win">0</span></p>
+            <p>Lost: <span id="lose">0</span></p>
+            <p>Tied: <span id="tie">0</span></p>
+            <p>Round: <span id="turns">0</span></p>
+        </div>
+        
+        
+        <script type="text/javascript" src="gamejs.js"></script>
+    </body>
+</html>
